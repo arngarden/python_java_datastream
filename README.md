@@ -13,12 +13,19 @@ Example
 
     with open('/tmp/stream', 'wb') as f:
         dos = DataOutputStream(f)
-        dos.write_long(12345678)
+        dos.write_int(12345)
         dos.write_utf('hello world')
 
     with open('/tmp/stream', 'rb') as f:
         dis = DataInputStream(f)
-        val = dis.read_long()
+        val = dis.read_int()
         string = dis.read_utf()
 
+
+Tests
+------
+
+Simple unittests exists in file test.py
         
+        
+(You should note that the library has no exception handling and might not be accurate in the way it handles UTF-strings with NULL characters. For my use case it is working well but if you are planning on using the library for something important you should probably verify that everything works for you.)
