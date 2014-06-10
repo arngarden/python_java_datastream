@@ -21,4 +21,11 @@ Example
         val = dis.read_int()
         string = dis.read_utf()
 
+
+Tests
+------
+
+Simple unittests exists in file test.py
         
+        
+(You should note that the library has no exception handling and might not be accurate in the way it handles UTF-strings with NULL characters. For my use case it is working well but if you are planning on using the library for something important you should probably verify that everything works for you.)
