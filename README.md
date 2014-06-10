@@ -13,12 +13,12 @@ Example
 
     with open('/tmp/stream', 'wb') as f:
         dos = DataOutputStream(f)
-        dos.write_long(12345678)
+        dos.write_int(12345)
         dos.write_utf('hello world')
 
     with open('/tmp/stream', 'rb') as f:
         dis = DataInputStream(f)
-        val = dis.read_long()
+        val = dis.read_int()
         string = dis.read_utf()
 
         
